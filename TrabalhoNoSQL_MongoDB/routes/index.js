@@ -12,24 +12,31 @@ router.get('/edit/:id', function(req, res) {
 router.post('/edit/:id', function(req, res) {
   var id = req.params.id;
   var nome = req.body.nome;
-  var idade = parseInt(req.body.idade);
-  global.db.update(id, {nome, idade}, (e, result) => {
+  var telefone = req.body.telefone;
+  var curso = req.body.curso;
+  var periodo = req.body.periodo;
+  var faculdade = req.body.faculdade;
+  var estado = req.body.estado;
+  var cidade = req.body.cidade;
+  global.db.update(id, {nome, telefone, curso, periodo, faculdade, estado, cidade}, (e, result) => {
         if(e) { return console.log(e); }
         res.redirect('/');
     });
 });
 
 router.get('/new', function(req, res, next) {
-  res.render('new', { title: 'Novo Cadastro', doc: {"nome":"","telefone":"","curso":"","periodo":""}, action: '/new' });
+  res.render('new', { title: 'Novo Cadastro', doc: {"nome":"","telefone":"","curso":"","periodo":"","faculdade":"","estado":"","cidade":""}, action: '/new' });
 });
 
 router.post('/new', function(req, res) {
   var nome = req.body.nome;
-  //var telefone = parseInt(req.body.telefone);
   var telefone = req.body.telefone;
   var curso = req.body.curso;
   var periodo = req.body.periodo;
-  global.db.insert({nome, telefone, curso, periodo}, (err, result) => {
+  var faculdade = req.body.faculdade;
+  var estado = req.body.estado;
+  var cidade = req.body.cidade;
+  global.db.insert({nome, telefone, curso, periodo, faculdade, estado, cidade}, (err, result) => {
           if(err) { return console.log(err); }
           res.redirect('/');
       })
