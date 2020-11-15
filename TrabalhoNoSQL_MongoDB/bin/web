@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 /**
  * Module dependencies..
  */
@@ -9,30 +8,21 @@ var app = require('../app');
 var debug = require('debug')('workshoptdc:server');
 var http = require('http');
 
-/**
- * Get port from environment and store in Express.
- */
 
 var port = normalizePort(process.env.PORT || '5000');
 app.set('port', port);
 
 /**
- * Create HTTP server.
+ * Criar servidor HTTP.
  */
 
 var server = http.createServer(app);
 
-/**
- * Listen on provided port, on all network interfaces.
- */
 
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-/**
- * Normalize a port into a number, string, or false.
- */
 
 function normalizePort(val) {
   var port = parseInt(val, 10);
@@ -51,7 +41,7 @@ function normalizePort(val) {
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * Lista eventos  de "erro" do servidor HTTP
  */
 
 function onError(error) {
@@ -63,7 +53,7 @@ function onError(error) {
     ? 'Pipe ' + port
     : 'Port ' + port;
 
-  // handle specific listen errors with friendly messages
+  
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
@@ -78,10 +68,6 @@ function onError(error) {
   }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
-
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
@@ -89,3 +75,4 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
