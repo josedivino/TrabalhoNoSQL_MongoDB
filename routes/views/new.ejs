@@ -1,0 +1,21 @@
+<%- include('top.ejs') %>
+<form action="<%= action %>" method="POST">
+  <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome" value="<%= doc.nome %>" />
+  </div>
+  <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Digite o telefone" value="<%= doc.telefone %>" />
+  </div>
+  <div class="form-group">
+      <label for="curso">Curso</label>
+      <input type="text" class="form-control" id="curso" name="curso" placeholder="Digite o curso" value="<%= doc.curso %>" />
+  </div>
+  <div class="form-group">
+    <label for="periodo">Periodo</label>
+    <input type="text" class="form-control" id="periodo" name="periodo" placeholder="Digite o periodo" value="<%= doc.periodo %>" />
+</div>
+  <input type="submit" value="Salvar" class="btn btn-primary"/><a href="/" class="btn">Cancelar</a>
+</form>
+<%- include('bottom.ejs') %>
