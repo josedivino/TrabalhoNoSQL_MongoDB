@@ -7,15 +7,15 @@
       </tr>
   </thead>
   <tbody>
-<% docs.forEach(function(customer){ %>
+<% docs.forEach(function(aluno){ %>
   <tr>
     <td>
-    <a href="/edit/<%= customer._id %>">
-      <%= customer.nome %>
+    <a href="/edit/<%= aluno._id %>">
+      <%= aluno.nome %>
     </a>
   </td>
   <td>
-    <a href="/delete/<%= customer._id %>" class="btn btn-danger" 
+    <a href="/delete/<%= aluno._id %>" class="btn btn-danger" 
       onclick="return confirm('Tem certeza que deseja excluir?');">
       X
     </a>

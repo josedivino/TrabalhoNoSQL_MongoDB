@@ -1,16 +1,14 @@
 
 global.db = require('../db');
 var app = require('../app');
-var debug = require('debug')('workshoptdc:server');
+var debug = require('debug')('lista_de_alunos:server');
 var http = require('http');
 
 
 var port = normalizePort(process.env.PORT || '5000');
 app.set('port', port);
 
-/**
- * Criar servidor HTTP.
- */
+// Criando servidor
 
 var server = http.createServer(app);
 
@@ -36,10 +34,7 @@ function normalizePort(val) {
   return false;
 }
 
-/**
- * Lista eventos  de "erro" do servidor HTTP
- */
-
+// Eventos de erros do servidor
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
