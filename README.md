@@ -11,7 +11,7 @@ Esse processo se faz necessário caso já não tenha em seu sistema operacional 
 ```sh
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
-# para esse ultimo comando, deve visualizar a ão instalada do Node
+# para esse ultimo comando, deve visualizar a versão instalada do Node
 node -v
 # v14...
 ```
@@ -28,3 +28,6 @@ docker run --name mongodb -p 27017:27017 mongo
 npm i
 npm start
 ```
+
+#### 
+Projeto no localhost:5000

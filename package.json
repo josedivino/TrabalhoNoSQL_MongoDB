@@ -1,11 +1,10 @@
 {
-  "name": "TrabalhoNoSQL_MongoDB",
+  "name": "CrudComMongo",
   "version": "1.0.0",
-  "description": "Trablho de CRUD com Node.js e com MongoDB",
-  "main": "web",
+  "description": "Trabalho de CRUD com Node.js e com MongoDB",
+  "main": "web.js",
   "scripts": {
-    "start": "node ./bin/web",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/web.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +13,7 @@
   "keywords": [
     "crud"
   ],
-  "author": "josedivino",
+  "author": "josedivino, cassiemiro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/josedivino/TrabalhoNoSQL_MongoDB/issues"
